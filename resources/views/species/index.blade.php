@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Zoológicos</title>
+  <title>Especies</title>
   <meta name="description" content="">
   <meta name="author" content="">
 </head>
     <body>
         <h1>Especies</h1>
         <p>
-            <a href="">CREAR NUEVA ESPECIE</a>
+            <a href="{{ route('species.create') }}">CREAR NUEVA ESPECIE</a>
         </p>
         <table>
             <thead>
@@ -33,7 +33,9 @@
                         <th>{{ $species->vulgar_name }}</th>
                         <th>{{ $species->scientific_name }}</th>
                         <th>{{ $species->family }}</th>
-                        <th>{{ $species->on_danger }}</th>
+                        <!--Para darle valor a los booleans, se le indica con '? a:b', en donde a es el resultado de true
+                        y b es el resultado de false-->
+                        <th>{{ $species->on_danger ? 'Sí':'No'}}</th>
                         <th>
                             <a href="">
                                 Editar
