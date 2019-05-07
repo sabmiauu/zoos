@@ -43,7 +43,9 @@ Route::delete('zoos/{zoo}', 'ZoosController@delete')->name('zoos.delete');
 //-------------------------Species Routes-------------------------
 
 Route::get('species', 'SpeciesController@index')->name('species.index');
-//Ésta es la ruta para crear un elemento
+//CREAR
 Route::get('species/create', 'SpeciesController@create')->name('species.create');
-//Esta es la ruta para guardar la info de los formularios
+//GUARDAR
 Route::post('species', 'SpeciesController@store')->name('species.store');
+//DETALLE
+Route::get('species/{species}', 'SpeciesController@show')->name('species.show');

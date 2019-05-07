@@ -25,11 +25,7 @@
             <tbody>
                 @foreach($species as $species)
                     <tr>
-                        <th>
-                            <a href="">
-                                {{ $species->id }}
-                            </a>
-                        </th>
+                        <th>{{ $species->id }}</th>
                         <th>{{ $species->vulgar_name }}</th>
                         <th>{{ $species->scientific_name }}</th>
                         <th>{{ $species->family }}</th>
@@ -37,6 +33,9 @@
                         y b es el resultado de false-->
                         <th>{{ $species->on_danger ? 'Sí':'No'}}</th>
                         <th>
+                            <a href="{{ route('species.show', ['species' => $species]) }}">
+                                Ver
+                            </a><br>
                             <a href="">
                                 Editar
                             </a>

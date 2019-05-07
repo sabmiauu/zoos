@@ -17,6 +17,10 @@ class SpeciesController extends Controller
         return view('species.create');
     }
 
+    function show(Request $req, Species $species) {
+        return view('species.detail', ['species' => $species ]);
+    }
+
     function store(Request $req) {
         $species = $req->input('species');
         Species::create($species);
