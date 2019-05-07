@@ -43,9 +43,13 @@ Route::delete('zoos/{zoo}', 'ZoosController@delete')->name('zoos.delete');
 //-------------------------Species Routes-------------------------
 
 Route::get('species', 'SpeciesController@index')->name('species.index');
-//CREAR
+//CREAR VISTA
 Route::get('species/create', 'SpeciesController@create')->name('species.create');
-//GUARDAR
-Route::post('species', 'SpeciesController@store')->name('species.store');
+//EDITAR VISTA
+Route::get('species/{species}/edit', 'SpeciesController@edit')->name('species.edit');
 //DETALLE
 Route::get('species/{species}', 'SpeciesController@show')->name('species.show');
+//CREAR
+Route::post('species', 'SpeciesController@store')->name('species.store');
+//EDITAR
+Route::put('species/{species}', 'SpeciesController@update')->name('species.update');

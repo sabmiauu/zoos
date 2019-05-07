@@ -36,7 +36,7 @@
                             <a href="{{ route('species.show', ['species' => $species]) }}">
                                 Ver
                             </a><br>
-                            <a href="">
+                            <a href="{{ route('species.edit', ['species' => $species]) }}">
                                 Editar
                             </a>
                             <form method="" action="">
