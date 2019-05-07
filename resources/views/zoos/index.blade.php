@@ -36,7 +36,16 @@
                     <th>{{ $zoo->country }}</th>
                     <th>{{ $zoo->size }} m2</th>
                     <th>$ {{ $zoo->budget }}</th>
-                    <th><a href="{{ route('zoos.edit', ['zoo' => $zoo]) }}">Editar</a></th>
+                    <th>
+                        <a href="{{ route('zoos.edit', ['zoo' => $zoo]) }}">
+                            Editar
+                        </a>
+                        <form method="POST" action="{{ route('zoos.delete', ['zoo' => $zoo]) }}">
+                            @csrf
+                            {{ method_field('DELETE') }}
+                            <input type="submit" value="Eliminar">
+                        </form>
+                    </th>
                 </tr>
             @endforeach
         </tbody>

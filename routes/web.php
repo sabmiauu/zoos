@@ -38,6 +38,9 @@ Route::post('zoos', 'ZoosController@store')->name('zoos.store');
 //Con el método PUT se hace la ruta para actualizar los datos
 Route::put('zoos/{zoo}', 'ZoosController@update')->name('zoos.update');
 
+//Con el método DELETE creamos la ruta para eliminar un dato
+Route::delete('zoos/{zoo}', 'ZoosController@delete')->name('zoos.delete');
+
 
 //GET se usa para consultas, obtener vistas
 //POST se usa para enviar los datos y guardarlos como elemento nuevo

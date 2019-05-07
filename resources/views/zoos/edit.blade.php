@@ -30,7 +30,7 @@
             <input type="text" name="zoo[budget]" value="{{ $zoo->budget }}">
             <br><br>
 
-            <input type="submit" value="Crear">
+            <input type="submit" value="Editar">
         </form>
     </body>
 </html>

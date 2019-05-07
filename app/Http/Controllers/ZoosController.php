@@ -76,4 +76,9 @@ class ZoosController extends Controller
 
         return redirect()->route('zoos.show', ['zoo' => $zoo]);
     }
+
+    function delete(Request $req, Zoo $zoo) {
+        $zoo->delete();
+        return redirect()->route('zoos.index');
+    }
 }
