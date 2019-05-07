@@ -39,4 +39,9 @@ class SpeciesController extends Controller
         $species->save();
         return redirect()->route('species.show', ['species' => $species]);
     }
+
+    function delete(Request $req, Species $species) {
+        $species->delete();
+        return redirect()->route('species.index', ['species' => $species]);
+    }
 }

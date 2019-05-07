@@ -39,9 +39,9 @@
                             <a href="{{ route('species.edit', ['species' => $species]) }}">
                                 Editar
                             </a>
-                            <form method="" action="">
+                            <form method="POST" action="{{ route('species.delete', ['species' => $species]) }}">
                                 @csrf
-                                <!--{{ method_field('DELETE') }}-->
+                                {{ method_field('DELETE') }}
                                 <input type="submit" value="Eliminar">
                             </form>
                         </th>
