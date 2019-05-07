@@ -20,6 +20,7 @@
                 <th>País</th>
                 <th>Tamaño</th>
                 <th>Presupuesto anual</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -35,6 +36,7 @@
                     <th>{{ $zoo->country }}</th>
                     <th>{{ $zoo->size }} m2</th>
                     <th>$ {{ $zoo->budget }}</th>
+                    <th><a href="{{ route('zoos.edit', ['zoo' => $zoo]) }}">Editar</a></th>
                 </tr>
             @endforeach
         </tbody>

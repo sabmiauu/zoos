@@ -13,19 +13,21 @@
     <form method="POST" action="{{ route('zoos.store') }}">
         @csrf
         Nombre:<br>
-        <input type="text" name="name" value="">
+        <!--En name se pone 'zoo[name]' para que ese dato se pueda guardar en un arreglo, y para que, si hay otros inputs similares,
+        se pueda hacer la distinción que éste pertenece a la clase 'Zoo'-->
+        <input type="text" name="zoo[name]" value="">
         <br>
         Ciudad:<br>
-        <input type="text" name="city" value="">
+        <input type="text" name="zoo[city]" value="">
         <br>
         País:<br>
-        <input type="text" name="country" value="">
+        <input type="text" name="zoo[country]" value="">
         <br>
         Tamaño:<br>
-        <input type="text" name="size" value="">
+        <input type="text" name="zoo[size]" value="">
         <br>
         Presupuesto anual:<br>
-        <input type="text" name="budget" value="">
+        <input type="text" name="zoo[budget]" value="">
         <br><br>
 
         <input type="submit" value="Crear">

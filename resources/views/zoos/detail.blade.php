@@ -11,7 +11,7 @@
     <p>Ciudad: {{ $zoo->city }}</p>
     <p>País: {{ $zoo->country }}</p>
     <p>Tamaño: {{ $zoo->size }}m2</p>
-    <p>Presupuesto Anual: ${{ $zoo->burget }}</p>
+    <p>Presupuesto Anual: ${{ $zoo->budget }}</p>
     <a href="{{ route('zoos.index') }}">Regresar</a>
 </body>
 </html>

@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Zoo extends Model
 {
-    //
+    //Esta indicación se hace para hacer un arreglo de las variables que crearán el objeto Zoo
+    protected $fillable = [
+        'name', 'city', 'country', 'size', 'budget'
+    ];
 }
