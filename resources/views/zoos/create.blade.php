@@ -10,7 +10,7 @@
     <h1>CREAR NUEVO ZOOLÓGICO</h1>
     <!--La ruta "zoos.store" le indica la ruta que seguirá para guardar la información-->
     <!--"POST" es el método por el cuál se va a guardar la información-->
-    <form method="POST" action="{{ route('zoos.store') }}">
+    <form method="POST" action="{{ route('animals.store') }}">
         @csrf
         Nombre:<br>
         <!--En name se pone 'zoo[name]' para que ese dato se pueda guardar en un arreglo, y para que, si hay otros inputs similares,

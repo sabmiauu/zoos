@@ -50,11 +50,5 @@
             @endforeach
         </tbody>
     </table>
-    <ul>
-        <!--Para cada elemento (foreach) zoo de la clase zoos hacer una lista con su nombre-->
-        <!--@foreach($zoos as $zoo)
-            <li>{{ $zoo->name }}</li>
-        @endforeach-->
-    </ul>
 </body>
 </html>

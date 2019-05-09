@@ -55,3 +55,10 @@ Route::post('species', 'SpeciesController@store')->name('species.store');
 Route::put('species/{species}', 'SpeciesController@update')->name('species.update');
 //DELETE
 Route::delete('species/{species}', 'SpeciesController@delete')->name('species.delete');
+
+//-------------------------Animals Routes-------------------------
+
+Route::get('animals', 'AnimalsController@index')->name('animals.index');
+Route::get('animals/create', 'AnimalsController@create')->name('animals.create');
+
+Route::post('animals', 'AnimalsController@store')->name('animals.store');
