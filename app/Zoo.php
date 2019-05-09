@@ -10,4 +10,9 @@ class Zoo extends Model
     protected $fillable = [
         'name', 'city', 'country', 'size', 'budget'
     ];
+
+    //Aquí le indicamos al Zoo que un Zoo tiene muchas especies
+    public function species() {
+        return $this->belongsToMany('App\Species');
+    }
 }

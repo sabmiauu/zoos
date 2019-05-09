@@ -13,5 +13,11 @@
     <p>Tamaño: {{ $zoo->size }}m2</p>
     <p>Presupuesto Anual: ${{ $zoo->budget }}</p>
     <a href="{{ route('zoos.index') }}">Regresar</a>
+    <h2>Especies</h2>
+    <ul>
+        @foreach($zoo->species as $item)
+            <li>{{ $item->vulgar_name }}</li>
+        @endforeach
+    </ul>
 </body>
 </html>

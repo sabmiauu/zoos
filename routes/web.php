@@ -62,3 +62,8 @@ Route::get('animals', 'AnimalsController@index')->name('animals.index');
 Route::get('animals/create', 'AnimalsController@create')->name('animals.create');
 
 Route::post('animals', 'AnimalsController@store')->name('animals.store');
+
+//-------------------------Species-Zoos Routes-------------------------
+
+Route::get('zoos/{zoo}/species/edit', 'SpeciesZoosController@edit')->name('zoos.species.edit');
+Route::put('zoos/{zoo}/species/update', 'SpeciesZoosController@update')->name('zoos.species.update');

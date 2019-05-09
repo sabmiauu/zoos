@@ -14,4 +14,9 @@ class Species extends Model
     public function animals() {
         return $this->hasMany('App\Animal');
     }
+
+    //Aquí le indicamos a la Species que una Species puede pertenecer a muchos zoos
+    public function zoos() {
+        return $this->belongsToMany('App\Species');
+    }
 }
